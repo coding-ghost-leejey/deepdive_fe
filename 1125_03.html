@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>좋아하는 과목을 모두 고르시오</h1>
+    <!-- 암묵적인 레이블 -->
+    <ul>
+        <li>
+            <label><input type="checkbox" name="favorite_subject"> HTML</label>
+        </li>
+        <li>
+            <label><input type="checkbox" name="favorite_subject"> CSS</label>
+        </li>
+        <li>
+            <label><input type="checkbox" name="favorite_subject"> JavaScript</label>
+        </li>
+    </ul>
+
+    <h1>수강하실 과목을 한개만 고르시오</h1>
+    <ul>
+        <li>
+            <label><input type="radio" name="subject"> Figma</label>
+        </li>
+        <li>
+            <label><input type="radio" name="subject"> Cursor</label>
+        </li>
+        <li>
+            <label><input type="radio" name="subject"> MCP</label>
+        </li>
+        <li>
+            <input type="radio" name="subject" id="subjet_antigravity">
+            <label for="subjet_antigravity">AntiGravity</label>
+        </li>
+    </ul>
+
+    <!-- 명시적인 레이블 -->
+    <table>
+        <tr>
+            <th scope="row"><label for="contact_title">제목</label></th>
+            <td>
+                <input type="text" placeholder="제목입력" id="contact_title">
+            </td>
+        </tr>
+        <tr>
+            <th scope="row"><label for="contact_message">내용</label></th>
+            <td>
+                <textarea placeholder="문의내용을 입력하세요" id="contact_message"></textarea>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
