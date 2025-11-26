@@ -59,6 +59,8 @@ body {
 }
 
 .goods-container .goods-list {
+  display: flex;
+  gap: 20px;
 }
 
 .goods-container .goods-list li {
