@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Gallery</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #888;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            /* 반응형 컬럼: 최소 250px, 남으면 늘어남 */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* 행 높이 자동 조절 (기본 250px) */
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+            /* 빈 공간을 최대한 채우도록 설정 */
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Gallery Item */
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 비율 유지하며 꽉 채우기 */
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Hover Effects */
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
+        /* Featured Items (Span) - 다양한 크기 만들기 */
+        .card.wide {
+            grid-column: span 2;
+        }
+
+        .card.tall {
+            grid-row: span 2;
+        }
+
+        .card.big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+
+            .card.wide,
+            .card.tall,
+            .card.big {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Grid Gallery</h1>
+        <p>CSS Grid `minmax`, `span`, `dense`를 활용한 갤러리</p>
+    </header>
+
+    <div class="gallery">
+        <!-- 
+            grid-auto-flow: dense 덕분에 순서가 조금 바뀌더라도 
+            빈 공간을 효율적으로 채웁니다.
+        -->
+        <div class="card"><img src="https://picsum.photos/id/10/500/500" alt="Nature"></div>
+        <div class="card tall"><img src="https://picsum.photos/id/11/500/1000" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/12/500/500" alt="Nature"></div>
+        <div class="card wide"><img src="https://picsum.photos/id/13/1000/500" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/14/500/500" alt="Nature"></div>
+        <div class="card big"><img src="https://picsum.photos/id/15/1000/1000" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/16/500/500" alt="Nature"></div>
+        <div class="card tall"><img src="https://picsum.photos/id/17/500/1000" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/18/500/500" alt="Nature"></div>
+        <div class="card wide"><img src="https://picsum.photos/id/19/1000/500" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/20/500/500" alt="Nature"></div>
+        <div class="card"><img src="https://picsum.photos/id/28/500/500" alt="Nature"></div>
+    </div>
+</body>
+
+</html>
