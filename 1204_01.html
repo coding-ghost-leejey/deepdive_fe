@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="title">Hello world</h1>
+    <input type="text" id="input">
+    <button type="button" id="btn">ADD</button>
+    <p id="msg"></p>
+
+    <script>
+        // 버튼을 클릭하면 input에 입력된 값이 p태그에 출력되도록 하시오.
+        // renderMsg 기능 -> input의 값을 p태그에 출력한다.
+
+        // 1. get Elements
+        const input = document.getElementById('input')
+        const btn = document.getElementById('btn')
+        const msg = document.getElementById('msg')
+        const title = document.getElementById('title')
+
+        // 2. event
+        btn.addEventListener('click', renderMsg)
+
+        // 3. function
+        function renderMsg() {
+            // msg.textContent = input.value;
+            msg.textContent = title.textContent;
+            msg.innerHTML = '<strong>Hello</strong>'
+        }
+    </script>
+</body>
+
+</html>

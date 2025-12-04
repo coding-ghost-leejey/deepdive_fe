@@ -4,38 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이모티콘 마켓 반응형 사이트</title>
-    <link rel="stylesheet" href="./css/font.css">
+    <title>이모티콘 샵 반응형 사이트-메인페이지</title>
+    <link rel="stylesheet" href="./font.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./test.css">
-
 </head>
 
 <body>
     <header class="page-header">
-        <div class="inner">
+        <div class="header-inner inner">
             <h1 class="logo">
                 <a href="#">
                     EMOJI Market
                 </a>
             </h1>
             <div class="search-box">
-                <div class="search-input">
-                    <input type="search" placeholder="귀여운 이모티콘을 찾아보세요!">
+                <input type="search" placeholder="귀여운 이모티콘을 찾아보세요!">
+                <button type="submit">
                     <img class="search-icon" src="./images/icons/search.svg">
-                </div>
-
+                </button>
             </div>
-            <div class="menu-box">
-                <a href="#" class="home">홈</a>
-                <a href="#" class="popular-item">인기</a>
-                <a href="#" class="new-item">신규</a>
-                <a href="#" class="login">로그인</a>
-            </div>
+            <ul class="menu-box">
+                <li class="home active"><a href="#">홈</a></li>
+                <li class="popular-item"><a href="#">인기</a></li>
+                <li class="new-item"><a href="#">신규</a></li>
+                <li class="login"><a href="#">로그인</a></li>
+            </ul>
         </div>
     </header>
     <section class="hero-section">
-        <div class="section-inner">
+        <div class="hero-inner inner">
             <h1 class="hero-title">당신의 대화를<br>더 귀엽게 만들어보세요!</h1>
             <p>매일매일 새로운 작가님들의<br>반짝이는 아이디어를 만나보세요.</p>
             <a href="#" class="popular-emoji">인기 이모티콘 보러가기</a>
@@ -44,110 +42,111 @@
             </div>
         </div>
     </section>
-    <main class="page-main">
-        <h2>카테고리</h2>
-        <div class="category-tag">
-            <a href="#">전체</a>
-            <a href="#">동물</a>
-            <a href="#">커플</a>
-            <a href="#">직장인</a>
-            <a href="#">병맛</a>
-            <a href="#">텍스트</a>
-        </div>
-        <section class="recommand">
-            <div class="rec-title">
-                <h3>오늘의 추천 이모티콘</h3>
-                <a href="#" class="more">
-                    전체보기
-                </a>
+    <main class="container">
+        <div class="main-inner inner">
+            <div class="category">
+                <h2>카테고리</h2>
+                <div class="category-tag">
+                    <a href="#" class="active">전체</a>
+                    <a href="#">동물</a>
+                    <a href="#">커플</a>
+                    <a href="#">직장인</a>
+                    <a href="#">병맛</a>
+                    <a href="#">텍스트</a>
+                </div>
             </div>
-            <ul class="card-list">
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/bear.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">말랑말랑 찹쌀떡 곰</a>
-                        <a href="#" class="name">모찌스튜디오</a>
-                        <p class="price">2,500원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/cat.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">졸린 냥이</a>
-                        <a href="#" class="name">캣러버</a>
-                        <p class="price">2,500원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/chick.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">긍정왕 병아리</a>
-                        <a href="#" class="name">해피바이브</a>
-                        <p class="price">2,200원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/bunny.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">대충 그린 토끼</a>
-                        <a href="#" class="name">귀차니즘</a>
-                        <p class="price">1,500원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/dog.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">열망적인 강아지</a>
-                        <a href="#" class="name">멍멍이</a>
-                        <p class="price">2,500원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/hamster.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">소심한 햄스터</a>
-                        <a href="#" class="name">햄찌</a>
-                        <p class="price">2,000원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/fox.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">시크한 여우</a>
-                        <a href="#" class="name">폭스</a>
-                        <p class="price">2,500원</p>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="thumb">
-                        <a href="#"><img src="./images/emojimarket/bear.svg" alt=""></a>
-                    </div>
-                    <div class="description">
-                        <a href="#" class="title">직장인 김대리</a>
-                        <a href="#" class="name">워커홀릭</a>
-                        <p class="price">2,000원</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
+            <section class="recommand">
+                <div class="rec-title">
+                    <h2>오늘의 추천 이모티콘</h2>
+                    <a href="#" class="more">전체보기</a>
+                </div>
+                <ul class="card-list">
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/bear.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">말랑말랑 찹쌀떡 곰</a>
+                            <a href="#" class="name">모찌스튜디오</a>
+                            <p class="price">2,500<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/cat.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">졸린 냥이</a>
+                            <a href="#" class="name">캣러버</a>
+                            <p class="price">2,500<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/chick.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">긍정왕 병아리</a>
+                            <a href="#" class="name">해피바이브</a>
+                            <p class="price">2,200<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/bunny.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">대충 그린 토끼</a>
+                            <a href="#" class="name">귀차니즘</a>
+                            <p class="price">1,500<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/dog.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">열망적인 강아지</a>
+                            <a href="#" class="name">멍멍이</a>
+                            <p class="price">2,500<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/hamster.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">소심한 햄스터</a>
+                            <a href="#" class="name">햄찌</a>
+                            <p class="price">2,000<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/fox.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">시크한 여우</a>
+                            <a href="#" class="name">폭스</a>
+                            <p class="price">2,500<span class="won">원</span></p>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="thumb">
+                            <a href="#"><img src="./images/emojimarket/bear.svg" alt=""></a>
+                        </div>
+                        <div class="description">
+                            <a href="#" class="title">직장인 김대리</a>
+                            <a href="#" class="name">워커홀릭</a>
+                            <p class="price">2,000<span class="won">원</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
-
-    <section class="footer">
-        <div class="inner">
+    <footer class="footer">
+        <div class="footer-inner">
             <strong>Emoji Market</strong>
             <p>&copy;2025 Emoji Market.All rights reserved</p>
             <div class="link">
@@ -157,7 +156,7 @@
             </div>
         </div>
 
-    </section>
+    </footer>
 
 </body>
 
