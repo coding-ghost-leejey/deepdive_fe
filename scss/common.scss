@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+.page-header {
+  background-color: #fff;
+  .logo {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    @include flex;
+    height: 64px;
+  }
+}
